@@ -2,11 +2,8 @@
 local module = {
     core = {},
     tools = {},
-    scripts = {
-        ["prizzlife"] = "https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua"
-    }
+    scripts = loadstring(game:HttpGet("https://github.com/scriptdevvies/Scripts/raw/refs/heads/main/scripts.lua",true))()
 }
-
 -- Functions (help)
 function module:GetScriptList(readable)
     if readable then
@@ -14,7 +11,7 @@ function module:GetScriptList(readable)
             print(key .. ": " .. value)
         end
     else
-        return scripts
+        return self.scripts
     end
 end
 
