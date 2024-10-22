@@ -59,8 +59,8 @@ Hello, world!
 function *scriptdevvies.tools:CreateLoadString(url:string,str:string)*<br>
 Creates a `table` containing the `:Activate()` function for use to execute the wrapped `loadstring()` function when needed.<br>
 Parameters: url, URL for loadstring via HttpGet, and str, string for loadstring<br>
-If neither used, it will `return error("No string to activate, set func.str to the string you want to load (func is loadstring created and returned)")`<br>
-It uses internal function `scriptdevvies.core:__createloadstring(url,str)`<br>
+If neither used, it will `return error("No variables specified (specify __func.str and/or __func.url and check documentation)")`<br>
+It uses the internal function `scriptdevvies.core:__createloadstring(url,str)` for creation.<br>
 Example 1:
 ```lua
 local UrlLoadString = scriptdevvies.tools:CreateLoadString("https://example.com/myscript.lua")
