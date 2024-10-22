@@ -10,8 +10,14 @@ local module = {
 }
 
 -- Functions (help)
-function module:GetScriptList()
-    return scripts
+function module:GetScriptList(readable)
+    if readable then
+        for key, value in pairs(scriptList) do
+            print(key .. ": " .. value)
+        end
+    else
+        return scripts
+    end
 end
 
 -- Functions (Scripts)
