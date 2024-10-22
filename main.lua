@@ -48,37 +48,52 @@ end
 
 -- Create loadstring() function via variable that can be activated
 function module.tools:CreateLoadString(url, str)
-    if url ~= nil then
-        return module.core:__createloadstring(url)
-    elseif str ~= nil then
-        return module.core:__createloadstring(str)
+    if url ~= nil and str ~= nil then
+        return module.core:__createloadstring(url,str)
+    elseif url ~= nil and str == nil then
+        return module.core:__createloadstring(url,nil)
+    elseif url == nil and str ~= nil then
+        return module.core:__createloadstring(nil,str)
     else
-        return error("No parameters provided")
+        return module.core:__createloadstring(nil,nil)
     end
 end
 
 function module.core:__createloadstring(url, str)
     local __func = {}
-    if url then
-        -- Fix missing closing parenthesis
-        function __func:Activate()
-            return loadstring(game:HttpGet(url, true))()  -- Load and execute the script
+    if url ~= nil and str ~= nil then
+        __func.url = url
+        __func.str = str
+        function __func:Activate(isURL)
+            if isURL then
+                loadstring(game:HttpGet(__func.url,true))()
+            elseif isURL == false then
+                loadstring(__func.str)
+            end
         end
-    elseif str then
+    elseif url ~= nil and str == nil then
+        __func.url = url
         function __func:Activate()
-            return loadstring(str)()  -- Load and execute the string
+            loadstring(game:HttpGet(__func.url,true))()
         end
-    else
+    elseif url == nil and str ~= nil then
+        __func.str = str
         function __func:Activate()
-            if __func.str then
-                return loadstring(__func.str)()  -- Load and execute if str is set
+                return loadstring(__func.str)()
+        end
+    elseif url == nil and str == nil then
+        function __func:Activate(isURL)
+            if isURL then
+                loadstring(game:HttpGet(__func.url,true))()
+            elseif isURL == false then
+                loadstring(__func.str)
             else
-                return error("No string to activate, set func.str to the string you want to load (func is loadstring created and returned)")
+                return error("No variables specified (specify __func.str and/or __func.url and check documentation)")
             end
         end
     end
     
-    return __func  -- Return the function table
+    return __func
 end
 
 return module
