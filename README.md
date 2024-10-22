@@ -18,7 +18,7 @@ Returns a `table` with all scripts (raw exploit urls) available.
 ```lua
 module:GetScriptList()
 -- Output
-{...}
+(Returns table {...} with scripts)
 ```
 
 function *LoadScript(scr:string)*<br>
