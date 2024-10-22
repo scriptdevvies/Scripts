@@ -6,17 +6,25 @@ local module = {
 }
 -- Functions (help)
 function module:GetScriptList(readable)
-    if readable then
-        for key, value in pairs(self.scripts) do
+    local function buildTableString(t, indent)
+        indent = indent or 0
+        local indentStr = string.rep("    ", indent)
+        local result = ""
+        
+        for key, value in pairs(t) do
             if type(value) == "table" then
-                print(key .. ":")
-                for subkey, subvalue in pairs(value) do
-                    print("    " .. subkey .. ": " .. subvalue)
-                end
+                result = result .. indentStr .. key .. ":\n"
+                result = result .. buildTableString(value, indent + 1)
             else
-                print(key .. ": " .. tostring(value))
+                result = result .. indentStr .. key .. ": " .. tostring(value) .. "\n"
             end
         end
+        
+        return result
+    end
+
+    if readable then
+        return buildTableString(self.scripts)
     else
         return self.scripts
     end
