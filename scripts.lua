@@ -1,4 +1,6 @@
 local scripts = {
-  ["prizzlife"] = "https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua"
+  ["Prison Life"] = {
+    ["prizzlife"] = "https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua"
+  }
 }
 return scripts
