@@ -49,7 +49,7 @@ function module.tools:CreateLoadString(url:string,str:string)
   end
 end
 
-local function module.core:__createloadstring(url:string,str:string)
+function module.core:__createloadstring(url:string,str:string)
   local __func = {}
   if url then
     local function __func:Activate()
