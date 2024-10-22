@@ -48,10 +48,12 @@ end
 
 -- Create loadstring() function via variable that can be activated
 function module.tools:CreateLoadString(url, str)
-    if url then
+    if url ~= nil then
         return module.core:__createloadstring(url)
-    else
+    elseif str ~= nil then
         return module.core:__createloadstring(str)
+    else
+        return error("No parameters provided")
     end
 end
 
