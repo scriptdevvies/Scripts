@@ -8,7 +8,14 @@ local module = {
 function module:GetScriptList(readable)
     if readable then
         for key, value in pairs(self.scripts) do
-            print(key .. ": " .. value)
+            if type(value) == "table" then
+                print(key .. ":")
+                for subkey, subvalue in pairs(value) do
+                    print("    " .. subkey .. ": " .. subvalue)
+                end
+            else
+                print(key .. ": " .. tostring(value))
+            end
         end
     else
         return self.scripts
