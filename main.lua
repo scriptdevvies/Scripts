@@ -12,7 +12,7 @@ local module = {
 -- Functions (help)
 function module:GetScriptList(readable)
     if readable then
-        for key, value in pairs(scriptList) do
+        for key, value in pairs(scripts) do
             print(key .. ": " .. value)
         end
     else
