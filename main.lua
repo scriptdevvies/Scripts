@@ -55,15 +55,15 @@ end
 function module.core:__createloadstring(url:string,str:string)
   local __func = {}
   if url then
-    local function __func:Activate()
+     __func.Activate = function(self)
       loadstring(game:HttpGet((url),true)()
     end
   elseif str then
-    local function __func:Activate()
+    __func.Activate = function(self)
       loadstring(str)
     end
   else
-    local function __func:Activate()
+    __func.Activate = function(self)
       if __func.str then
         loadstring(__func.str)
       else
