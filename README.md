@@ -13,12 +13,17 @@ This way, you can get functions easily from the module.
 
 ##### Stored Scripts
 
-function *GetScriptList()*<br>
+function *GetScriptList(readable)*<br>
 Returns a `table` with all scripts (raw exploit urls) available.
+Parameters: *readable*, show readable format of table in print, like key: value, key: value
+If *readable* is false, you can use the table like table["key"] instead of it printing for you.
 ```lua
-module:GetScriptList()
+print(module:GetScriptList(true))
 -- Output
 (Returns table {...} with scripts)
+print(module:GetScriptList(false))
+-- Output
+table:0x and some random numbers
 ```
 
 function *LoadScript(scr:string)*<br>
