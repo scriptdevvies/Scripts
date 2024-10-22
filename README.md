@@ -5,7 +5,7 @@
 URL to load: https://raw.githubusercontent.com/scriptdevvies/Scripts/refs/heads/main/main.lua<br>
 The term `module` is the equivalent of `scriptdevvies` stated below.<br>
 Parameters in *italic* are required.<br>
-When using `loadstring('the url to load the module is stated above')` to load the module, you should do this:
+Use this snippet to load the module.
 ```lua
 local scriptdevvies = loadstring(game:HttpGet('url stated above',true))()
 ```
@@ -45,7 +45,7 @@ If not provided, will `return error("No URL specified")`
 ```lua
 module.tools:LoadStringHttp("https://example.com")
 -- Output
-(none, executes loadstring(game:HttpGet(("https://example.com"),true))())
+(none, executes loadstring(game:HttpGet("https://example.com",true))()
 ```
 
 function *module.tools:LoadString(str:string)*<br>
@@ -70,7 +70,7 @@ local UrlLoadString = module.tools:CreateLoadString("https://example.com")
 -- Output: (none, returns __func)
 UrlLoadString:Activate()
 -- Output:
-(executes loadstring(game:HttpGet(("https://example.com"),true))())
+(executes loadstring(game:HttpGet("https://example.com",true))()
 ```
 Example 2:
 ```lua
