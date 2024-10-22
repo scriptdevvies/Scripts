@@ -2,9 +2,9 @@
 ### ScriptDevvies Scripts is a Lua file meant to contain scripts and tools for you to use in your career of exploiting. Or whatever you please.
 
 ### Documentation
-URL to load: https://raw.githubusercontent.com/scriptdevvies/Scripts/refs/heads/main/main.lua
-The term `module` is the equivalent of `scriptdevvies` stated below.
-Parameters in *italic* are required.
+URL to load: https://raw.githubusercontent.com/scriptdevvies/Scripts/refs/heads/main/main.lua<br>
+The term `module` is the equivalent of `scriptdevvies` stated below.<br>
+Parameters in *italic* are required.<br>
 When using `loadstring('the url to load the module is stated above')` to load the module, you should do this:
 ```lua
 local scriptdevvies = loadstring('url stated above')
@@ -13,18 +13,17 @@ This way, you can get functions easily from the module.
 
 ##### Stored Scripts
 
-function *GetScriptList()*
+function *GetScriptList()*<br>
 Returns a `table` with all scripts (raw exploit urls) available.
 ```lua
 module:GetScriptList()
 -- Output
 {...}
 ```
-Defined table at line 2 of main.lua.
 
-function *LoadScript(scr:string)*
-Loads script from table of function module:GetScriptList()
-Parameters: *scr*, script name in table, such as `"prizzlife"`
+function *LoadScript(scr:string)*<br>
+Loads script from table of function module:GetScriptList()<br>
+Parameters: *scr*, script name in table, such as `"prizzlife"`<br>
 If not provided or invalid name in the table, will `return error("Invalid script, use the GetScriptList() function for a list of scripts")`
 ```lua
 module:LoadScript("prizzlife")
@@ -34,9 +33,9 @@ module:LoadScript("prizzlife")
 
 ##### Tools
 
-function *module.tools:LoadStringHttp(url:string)*
-Loads an HTTP URL with raw data to the loadstring() function via DataModel:HttpGet().
-Parameters: *url*, URL to load via loadstring() such as `"https://example.com"`
+function *module.tools:LoadStringHttp(url:string)*<br>
+Loads an HTTP URL with raw data to the loadstring() function via DataModel:HttpGet()<br>
+Parameters: *url*, URL to load via loadstring() such as `"https://example.com"`<br>
 If not provided, will `return error("No URL specified")`
 ```lua
 module.tools:LoadStringHttp("https://example.com")
@@ -44,9 +43,9 @@ module.tools:LoadStringHttp("https://example.com")
 (none, executes loadstring(game:HttpGet(("https://example.com"),true))())
 ```
 
-function *module.tools:LoadString(str:string)*
-loadstring() function but wrapped in a function. Differs from LoadStringHttp as it does not load with DataModel:HttpGet()
-Parameters: *str*, string to be loaded
+function *module.tools:LoadString(str:string)*<br>
+loadstring() function but wrapped in a function. Differs from LoadStringHttp as it does not load with DataModel:HttpGet()<br>
+Parameters: *str*, string to be loaded<br>
 If not provided, will `return error("Please specify a string")`
 ```lua
 module.tools:LoadString("print('hi')")
@@ -54,12 +53,12 @@ module.tools:LoadString("print('hi')")
 hi
 ```
 
-function *module.tools:CreateLoadString(url:string,str:string)*
-Creates a table with functions that can activate a loadstring when needed. *__func* is defined as the returned table.
-Parameters: url, URL for loadstring via HttpGet, str, string for loadstring
-If neither used, and `__func.str` is nil (empty), will `return error("No string to activate, set func.str to the string you want to load (func is loadstring created and returned)")`
-Uses: *module.core:__createloadstring(url:string,str:string)*
-**THE FUNCTION WILL BE UPDATED WITH NEW FEATURES, MEANING IT MAY NOT WORK IF YOU USE THIS. DOCUMENTATION WILL BE UPDATED WHEN THIS MESSAGE IS NOT HERE.**
+function *module.tools:CreateLoadString(url:string,str:string)*<br>
+Creates a table with functions that can activate a loadstring when needed. *__func* is defined as the returned table.<br>
+Parameters: url, URL for loadstring via HttpGet, str, string for loadstring<br>
+If neither used, and `__func.str` is nil (empty), will `return error("No string to activate, set func.str to the string you want to load (func is loadstring created and returned)")`<br>
+Uses: *module.core:__createloadstring(url:string,str:string)*<br>
+**THE FUNCTION WILL BE UPDATED WITH NEW FEATURES, MEANING IT MAY NOT WORK IF YOU USE THIS. DOCUMENTATION WILL BE UPDATED WHEN THIS MESSAGE IS NOT HERE.**<br>
 Example 1:
 ```lua
 local UrlLoadString = module.tools:CreateLoadString("https://example.com")
