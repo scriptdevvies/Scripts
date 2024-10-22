@@ -1,18 +1,16 @@
--- Scripts provided
-local scripts = {
-    ["prizzlife"] = "https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua"
-}
-
 -- Script initialization
 local module = {
     core = {},
-    tools = {}
+    tools = {},
+    scripts = {
+        ["prizzlife"] = "https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua"
+    }
 }
 
 -- Functions (help)
 function module:GetScriptList(readable)
     if readable then
-        for key, value in pairs(scripts) do
+        for key, value in pairs(module.scripts) do
             print(key .. ": " .. value)
         end
     else
