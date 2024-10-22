@@ -1,94 +1,97 @@
 # ScriptDevvies Scripts
-### ScriptDevvies Scripts is a Lua file meant to contain scripts and tools for you to use in your career of exploiting. Or whatever you please.
+### ScriptDevvies Scripts is an API service designed for exploiters and penetration testers to use to make their jobs easier.
 
 ### Documentation
 URL to load: https://raw.githubusercontent.com/scriptdevvies/Scripts/refs/heads/main/main.lua<br>
-The term `module` is the equivalent of `scriptdevvies` stated below.<br>
 Parameters in *italic* are required.<br>
-Use this snippet to load the module.
+Use this snippet to load the ScriptDevvies API.
 ```lua
-local scriptdevvies = loadstring(game:HttpGet('url stated above',true))()
+local scriptdevvies = loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptdevvies/Scripts/refs/heads/main/main.lua',true))()
 ```
-This way, you can get functions easily from the module.
 
 ##### Stored Scripts
 
 function *GetScriptList(readable)*<br>
-Returns a `table` with all scripts (raw exploit urls) available.
-Parameters: *readable*, show readable format of table in print, like key: value, key: value
-If *readable* is false, you can use the table like table["key"] instead of it printing for you.
+Returns a `table` with all script hubs or exploit URLs available.
+Parameters: *readable*, to show a readable format of table as a `string`, created for the `print()` function.
+If *readable* is false, it provides a `table` for general use.
 ```lua
-print(module:GetScriptList(true))
+print(scriptdevvies:GetScriptList(true))
 -- Output
-(Returns table {...} with scripts)
-print(module:GetScriptList(false))
+key: value, key: value, etc...
+print(scriptdevvies:GetScriptList(false))
 -- Output
-table:0x and some random numbers
+table:0x12345678
 ```
 
-function *LoadScript(scr:string)*<br>
-Loads script from table of function module:GetScriptList()<br>
-Parameters: *scr*, script name in table, such as `"prizzlife"`<br>
+function *LoadScript(scr)*<br>
+Loads script from our API's database of scripts.<br>
+Parameters: *scr*, which is the name of the script obtained via function *GetScriptList(readable)*.<br>
 If not provided or invalid name in the table, will `return error("Invalid script, use the GetScriptList() function for a list of scripts")`
 ```lua
-module:LoadScript("prizzlife")
+scriptdevvies:LoadScript("prizzlife")
 -- Output
-(none, executes loadstring of prizzlife script)
+(No output, executes the script "PrizzLife" in our database.)
 ```
 
 ##### Tools
 
-function *module.tools:LoadStringHttp(url:string)*<br>
-Loads an HTTP URL with raw data to the loadstring() function via DataModel:HttpGet()<br>
-Parameters: *url*, URL to load via loadstring() such as `"https://example.com"`<br>
+function *scriptdevvies.tools:LoadStringHttp(url)*<br>
+Loads the HTTP URL provided in the `url` parameter of the function via `loadstring(game:HttpGet(url,true))()`
+Parameters: *url*, the URL to load in the `loadstring()` function.<br>
 If not provided, will `return error("No URL specified")`
 ```lua
-module.tools:LoadStringHttp("https://example.com")
+scriptdevvies.tools:LoadStringHttp("https://example.com/myscript.lua")
 -- Output
-(none, executes loadstring(game:HttpGet("https://example.com",true))()
+(No output, executes the loadstring() function with the URL provided, which is https://example.com/myscript.lua)
 ```
 
-function *module.tools:LoadString(str:string)*<br>
-loadstring() function but wrapped in a function. Differs from LoadStringHttp as it does not load with DataModel:HttpGet()<br>
-Parameters: *str*, string to be loaded<br>
+function *scriptdevvies.tools:LoadString(str:string)*<br>
+loadstring() function wrapped in our API.
+Parameters: *str*, the string to be executed.<br>
 If not provided, will `return error("Please specify a string")`
 ```lua
-module.tools:LoadString("print('hi')")
+scriptdevvies.tools:LoadString("print('Hello, world!')")
 -- Output
-hi
+Hello, world!
 ```
 
-function *module.tools:CreateLoadString(url:string,str:string)*<br>
-Creates a table with functions that can activate a loadstring when needed. *__func* is defined as the returned table.<br>
-Parameters: url, URL for loadstring via HttpGet, str, string for loadstring<br>
-If neither used, and `__func.str` is nil (empty), will `return error("No string to activate, set func.str to the string you want to load (func is loadstring created and returned)")`<br>
-Uses: *module.core:__createloadstring(url:string,str:string)*<br>
-**THE FUNCTION WILL BE UPDATED WITH NEW FEATURES, MEANING IT MAY NOT WORK IF YOU USE THIS. DOCUMENTATION WILL BE UPDATED WHEN THIS MESSAGE IS NOT HERE.**<br>
+function *scriptdevvies.tools:CreateLoadString(url:string,str:string)*<br>
+Creates a `table` containing the `:Activate()` function for use to execute the wrapped `loadstring()` function when needed.<br>
+Parameters: url, URL for loadstring via HttpGet, and str, string for loadstring<br>
+If neither used, it will `return error("No string to activate, set func.str to the string you want to load (func is loadstring created and returned)")`<br>
+It uses internal function `scriptdevvies.core:__createloadstring(url,str)`<br>
 Example 1:
 ```lua
-local UrlLoadString = module.tools:CreateLoadString("https://example.com")
--- Output: (none, returns __func)
+local UrlLoadString = scriptdevvies.tools:CreateLoadString("https://example.com/myscript.lua")
+-- Output:
+(No output, returns a table which contains the :Activate() function)
 UrlLoadString:Activate()
 -- Output:
-(executes loadstring(game:HttpGet("https://example.com",true))()
+(No output, executes loadstring(game:HttpGet("https://example.com",true))())
 ```
 Example 2:
 ```lua
-local StringLoadString = module.tools:CreateLoadString(nil,"print('hi')")
--- Output: (none, returns __func)
+local StringLoadString = scriptdevvies.tools:CreateLoadString(nil,"print('Hello, world!')")
+-- Output:
+(No output, returns a table which contains the :Activate() function)
 StringLoadString:Activate()
 -- Output:
-hi (executes loadstring "print('hi')")
+Hello, world!
 ```
 Example 3:
 ```lua
-local LoadString = module.tools:CreateLoadString()
-LoadString.str = "print('hi')"
+local LoadString = scriptdevvies.tools:CreateLoadString()
+LoadString.url = "https://example.com/myscript.lua"
+LoadString.str = "print('Hello, world!')"
 -- Output
-(none, __func.str has been defined)
-LoadString:Activate()
+(No output, returns a table which has the :Activate(isURL) function)
+LoadString:Activate(true)
 -- Output
-hi (string has been activated)
+(No output, executes loadstring(game:HttpGet("https://example.com/myscript.lua",true))())
+LoadString:Activate(false)
+-- Output
+Hello, world!
 ```
 
-**That's all we have as of now! Documentation may be updated soon.**
+**That's all the functions we currently have! Documentation may be updated soon.**
