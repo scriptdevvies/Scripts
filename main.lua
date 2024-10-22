@@ -4,7 +4,10 @@ local scripts = {
 }
 
 -- Script initialization
-local module = {}
+local module = {
+  core = {},
+  tools = {}
+}
 
 -- Functions (help)
 function module:GetScriptList()
