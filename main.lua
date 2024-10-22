@@ -15,7 +15,7 @@ function module:GetScriptList()
 end
 
 -- Functions (Scripts)
-function module:LoadScript(scr:string)
+function module:LoadScript(scr)
   if scripts[scr] then
     loadstring(game:HttpGet((scripts[scr]),true))()
   else
@@ -25,7 +25,7 @@ end
 
 -- Functions (Tools)
 -- loadstring() via HttpGet (put into a function)
-function module.tools:LoadStringHttp(url:string)
+function module.tools:LoadStringHttp(url)
   if url then
     loadstring(game:HttpGet((url),true))()
   else
@@ -34,7 +34,7 @@ function module.tools:LoadStringHttp(url:string)
 end
 
 -- loadstring() via string (bytecode or minified, no HttpGet)
-function module.tools:LoadString(str:string)
+function module.tools:LoadString(str)
   if str then
     loadstring(str)
   else
@@ -44,7 +44,7 @@ end
 
 
 -- Create loadstring() function via variable that can be activated
-function module.tools:CreateLoadString(url:string,str:string)
+function module.tools:CreateLoadString(url,str)
   if url then
     return module.core:__createloadstring(url)
   else
@@ -52,7 +52,7 @@ function module.tools:CreateLoadString(url:string,str:string)
   end
 end
 
-function module.core:__createloadstring(url:string,str:string)
+function module.core:__createloadstring(url,str)
   local __func = {}
   if url then
      __func.Activate = function(self)
