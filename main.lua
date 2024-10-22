@@ -21,7 +21,7 @@ end
 -- Functions (Scripts)
 function module:LoadScript(scr)
     if self.scripts[scr] then
-        loadstring(game:HttpGet(scripts[scr], true))()  -- Load and execute the script
+        loadstring(game:HttpGet(self.scripts[scr], true))()  -- Load and execute the script
     else
         return error("Invalid script, use the GetScriptList() function")
     end
