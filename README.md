@@ -7,7 +7,7 @@ The term `module` is the equivalent of `scriptdevvies` stated below.<br>
 Parameters in *italic* are required.<br>
 When using `loadstring('the url to load the module is stated above')` to load the module, you should do this:
 ```lua
-local scriptdevvies = loadstring(game:HttpGet(('url stated above'),true))()
+local scriptdevvies = loadstring(game:HttpGet('url stated above',true))()
 ```
 This way, you can get functions easily from the module.
 
