@@ -24,12 +24,12 @@ print(scriptdevvies:GetScriptList(false))
 table:0x12345678
 ```
 
-function *LoadScript(scr)*<br>
+function *LoadScript(parentKey,scriptName)*<br>
 Loads script from our API's database of scripts.<br>
-Parameters: *scr*, which is the name of the script obtained via function *GetScriptList(readable)*.<br>
+Parameters: *parentKey*, which is the name of the parent key of where the script is located, *scriptName*, which is the script's name itself.<br>
 If not provided or invalid name in the table, will `return error("Invalid script, use the GetScriptList() function for a list of scripts")`
 ```lua
-scriptdevvies:LoadScript("prizzlife")
+scriptdevvies:LoadScript("Prison Life","prizzlife")
 -- Output
 (No output, executes the script "PrizzLife" in our database.)
 ```
