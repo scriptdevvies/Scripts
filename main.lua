@@ -31,11 +31,12 @@ function module:GetScriptList(readable)
 end
 
 -- Functions (Scripts)
-function module:LoadScript(scr)
-    if self.scripts[scr] then
-        loadstring(game:HttpGet(self.scripts[scr], true))()  -- Load and execute the script
+function module:LoadScript(parentKey, scriptName)
+    if self.scripts[parentKey] and self.scripts[parentKey][scriptName] then
+        local scriptUrl = self.scripts[parentKey][scriptName]
+        loadstring(game:HttpGet(scriptUrl, true))()  -- Load and execute the script
     else
-        return error("Invalid script, use the GetScriptList() function")
+        return error("Invalid script or parent key, use the GetScriptList() function")
     end
 end
 
