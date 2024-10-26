@@ -32,8 +32,8 @@ end
 
 -- Functions (Scripts)
 function module:LoadScript(parentKey, scriptName)
-    if self.scripts[parentKey] and self.scripts[parentKey][scriptName] then
-        local scriptUrl = self.scripts[parentKey][scriptName]
+    if self.scripts[parentKey:lower()] and self.scripts[parentKey:lower()][scriptName:lower()] then
+        local scriptUrl = self.scripts[parentKey:lower()][scriptName:lower()]
         loadstring(game:HttpGet(scriptUrl, true))()  -- Load and execute the script
     else
         return error("Invalid script or parent key, use the GetScriptList() function")
