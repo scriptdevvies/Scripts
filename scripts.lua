@@ -1,115 +1,115 @@
 local scripts = {
-  ["Prison Life"] = {
+  ["prison Life"] = {
     ["prizzlife"] = "https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua",
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Arsenal"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["arsenal"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["A Bizzare Day"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["a bizzare day"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Assassin"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["assassin"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Bad Business"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["bad business"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Bullet Hell"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["bullet hell"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["BIG Paintball"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["big paintball"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Counter Blox"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["counter blox"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Esper Online"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["esper online"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Island Royale"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["island royale"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["INFINITY RPG 2"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["infinity rpg 2"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["JoJo Blox"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["jojo blox"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["KAT (Knife Ability Test)"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["kat"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Lifting Simulator"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["lifting simulator"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Muscle Legend"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["muscle legend"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Mad Paintball 2"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["mad paintball 2"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Mayday"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["mayday"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Ninja Legends"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["ninja legends"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["No Scope Sniping"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["no scope sniping"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["One Piece Legendary"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["one piece legendary"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["One Punch Man"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["one punch man"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Operation Scorpion"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["operation scorpion"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["One Piece Ultimate"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["one piece sltimate"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["PowerSimulator"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["powersimulator"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Phantom Forces"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["phantom forces"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Project Lazarus"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["project lazarus"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Ruddevs Battle Royale"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["ruddevs battle royale"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["R2DA"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["r2da"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Redwodd Prison"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["redwood prison"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Stands Online"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["stands online"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Strucid"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["strucid"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Skywars"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["skywars"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Sound Space"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["sound space"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Vehicle Tycoon"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["vehicle tycoon"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Wild Revolvers"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["wild revolvers"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Zombie Rush"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["zombie rush"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   },
-  ["Zombie Strike"] = {
-    ["owlhub"] = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
+  ["zombie strike"] = {
+    ["owlhub"] = "https://raw.githubusercontent.com/criShoux/OwlHub/master/OwlHub.txt"
   }
 }
 return scripts
